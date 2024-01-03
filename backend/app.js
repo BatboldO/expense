@@ -27,6 +27,11 @@ app.use("/transactions/", transactionRoutes);
 //http://localhost:8008/api/image
 app.use("/api/image", imageRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Welcome Income and Expense API.");
+});
+
+
 app.listen(PORT, () => {
   console.log(`Сервер ${PORT} дээр аслаа.`);
 });
